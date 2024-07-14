@@ -14,7 +14,7 @@ const Banner = () => {
    const swiperRef = useRef(null);
 
    return (
-      <>
+      <section id="banner">
          <Swiper
             onSwiper={(swiper) => {
                swiperRef.current = swiper;
@@ -47,7 +47,7 @@ const Banner = () => {
                <Slide bgImg={bg4} swiperRef={swiperRef}></Slide>
             </SwiperSlide>
          </Swiper>
-      </>
+      </section>
    );
 };
 

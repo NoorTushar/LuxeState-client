@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import navLogo from "../../../assets/logo/luxtate-logo-gold.png";
 const navItems = (
    <>
       <li>
@@ -38,13 +40,29 @@ const NavBar = () => {
                   {navItems}
                </ul>
             </div>
-            <a className="btn btn-ghost text-xl">LuxEstate</a>
+            <Link
+               to={"/"}
+               className="text-lg flex items-center gap-1 tracking-[3px] group"
+            >
+               <img
+                  className="w-8 object-cover group-hover:"
+                  src={navLogo}
+                  alt=""
+               />
+               <h4 className="text-ourPrimary font-medium">LUXESTATE</h4>
+            </Link>
          </div>
          <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navItems}</ul>
          </div>
          <div className="navbar-end">
-            <a className="btn">Button</a>
+            <Link
+               to={"/login"}
+               className="py-1.5 px-4 relative group overflow-hidden font-medium bg-transparent inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase"
+            >
+               <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
+               <span className="relative tracking-[2px] text-sm">Login</span>
+            </Link>
          </div>
       </header>
    );

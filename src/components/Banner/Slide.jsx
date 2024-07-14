@@ -16,13 +16,13 @@ const Slide = ({ bgImg, swiperRef }) => {
                <h4 className="text-ourPrimary text-lg mb-2 tracking-[5px] uppercase font-medium">
                   welcome to luxestate
                </h4>
-               <h1 className="mb-5 text-[56px] lg:text-[86px] text-white font-semibold  tracking-[3px] md:leading-[60px] uppercase">
+               <h1 className="mb-5 text-[46px] lg:text-[86px] text-white font-semibold  tracking-[3px] md:leading-[60px] uppercase break-words">
                   real estate
                   <br /> <span className="text-stroke">application</span>
                </h1>
 
                <div className="flex justify-start"></div>
-               <div className="custom-navigation space-x-4 mt-6">
+               <div className="custom-navigation space-x-4 mt-3 md:mt-6">
                   <button
                      onClick={() => swiperRef.current?.slidePrev()}
                      className="p-2 relative group overflow-hidden font-medium bg-transparent text-ourPrimary inline-block custom-next border-ourPrimary border hover:border-white"

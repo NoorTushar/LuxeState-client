@@ -7,18 +7,18 @@
    }
 }
 
-h1 {
+#banner h1 {
    line-height: 100px !important;
    @media screen and (max-width: 1024px) {
-      line-height: 62.5px !important;
+      line-height: 55.5px !important;
    }
 }
-.text-stroke {
+#banner .text-stroke {
    -webkit-text-stroke: 1px white; /* Adds white stroke to the text */
    color: transparent; /* Makes the text color transparent */
 }
 
-.swiper-pagination-bullet {
+#banner .swiper-pagination-bullet {
    background-color: #f86244 !important;
    width: 20px !important;
    height: 5px !important;
@@ -29,8 +29,8 @@ h1 {
    -o-border-radius: 0;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
+#banner .swiper-horizontal > .swiper-pagination-bullets,
+#banner .swiper-pagination-bullets.swiper-pagination-horizontal {
    bottom: 20px !important;
 }
 
