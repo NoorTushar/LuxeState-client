@@ -1,0 +1,62 @@
+.swiper-button-prev,
+.swiper-button-next {
+   color: #f86244 !important;
+
+   @media screen and (max-width: 767px) {
+      display: none !important;
+   }
+}
+
+h1 {
+   line-height: 100px !important;
+   @media screen and (max-width: 1024px) {
+      line-height: 62.5px !important;
+   }
+}
+.text-stroke {
+   -webkit-text-stroke: 1px white; /* Adds white stroke to the text */
+   color: transparent; /* Makes the text color transparent */
+}
+
+.swiper-pagination-bullet {
+   background-color: #f86244 !important;
+   width: 20px !important;
+   height: 5px !important;
+   border-radius: 0 !important;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   -ms-border-radius: 0;
+   -o-border-radius: 0;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+   bottom: 20px !important;
+}
+
+/* .custom-navigation {
+   position: absolute;
+   bottom: 20px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   transform: translateY(-50%);
+}
+
+.custom-prev,
+.custom-next {
+   background-color: rgba(255, 255, 255, 0.5);
+   border: none;
+   padding: 10px 20px;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: bold;
+   color: #333;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+   background-color: rgba(255, 255, 255, 0.8);
+} */
