@@ -1,0 +1,216 @@
+[
+   {
+      "estate_title": "Modern Apartment in Dhaka",
+      "category": "residential",
+      "description": "Discover urban living at its finest in this modern apartment located in the heart of Dhaka. Featuring spacious rooms, contemporary design elements, and panoramic city views, this residence offers comfort and style. Ideal for families and professionals seeking convenience and luxury.",
+      "price": 350000,
+      "status": "buy",
+      "area": 1800,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Dhaka"
+      },
+      "image": "https://i.ibb.co/J3gQ490/pexels-enric-cruz-lopez-6039193.jpg",
+      "facilities": ["Gym", "Parking", "24/7 Security"]
+   },
+   {
+      "estate_title": "Commercial Office Space in Dhaka",
+      "category": "commercial",
+      "description": "Prime office space available for lease in central Dhaka. This modern office suite offers flexible layouts, state-of-the-art facilities, and a strategic location ideal for businesses looking to establish or expand their presence in the bustling capital city.",
+      "price": 5000,
+      "status": "rent",
+      "area": 2500,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Dhaka"
+      },
+      "image": "https://i.ibb.co/GVdg3DD/pexels-griffinw-6643262.jpg",
+      "facilities": ["Conference Rooms", "High-speed Internet", "24/7 Access"]
+   },
+   {
+      "estate_title": "Luxury Villa in Chittagong",
+      "category": "residential",
+      "description": "Escape to this luxurious villa nestled in the serene outskirts of Chittagong. Surrounded by lush greenery and offering breathtaking mountain views, this property combines elegance with tranquility. Featuring expansive living spaces, a private pool, and beautifully landscaped gardens, it's an oasis of relaxation and sophistication.",
+      "price": 1200000,
+      "status": "buy",
+      "area": 3500,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Chittagong"
+      },
+      "image": "https://i.ibb.co/vkj2bvD/pexels-heyho-6758771.jpg",
+      "facilities": ["Private Pool", "Garden", "Outdoor Dining Area"]
+   },
+   {
+      "estate_title": "Commercial Building in Chittagong",
+      "category": "commercial",
+      "description": "Prime commercial building available for sale in the bustling city center of Chittagong. This property offers multiple floors of office space, retail shops, and ample parking, making it an ideal investment opportunity in one of Bangladesh's major economic hubs.",
+      "price": 2500000,
+      "status": "buy",
+      "area": 5000,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Chittagong"
+      },
+      "image": "https://i.ibb.co/1KfJHbS/pexels-alwaysontheroad-1766226.jpg",
+      "facilities": ["Parking Garage", "Retail Shops", "High-traffic Location"]
+   },
+   {
+      "estate_title": "Lakefront Property in Khulna",
+      "category": "residential",
+      "description": "Embrace serenity with this lakefront property in Khulna, offering stunning views and a peaceful environment. Ideal for nature enthusiasts and those seeking a quiet retreat, this property features modern amenities and easy access to recreational activities.",
+      "price": 600000,
+      "status": "buy",
+      "area": 2800,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Khulna"
+      },
+      "image": "https://i.ibb.co/TwnkHsS/luxestate-bg-5.jpg",
+      "facilities": ["Lake Access", "Community Park", "Fitness Center"]
+   },
+   {
+      "estate_title": "Residential Complex in Rajshahi",
+      "category": "residential",
+      "description": "Explore luxurious living in this exclusive residential complex in Rajshahi. Designed for comfort and elegance, each unit offers spacious interiors, modern amenities, and beautiful landscaped gardens, creating a community-focused living experience.",
+      "price": 800000,
+      "status": "buy",
+      "area": 3200,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Rajshahi"
+      },
+      "image": "https://i.ibb.co/TgrVtMG/pexels-heyho-6758770.jpg",
+      "facilities": ["Swimming Pool", "Clubhouse", "Children's Playground"]
+   },
+   {
+      "estate_title": "Office Space in Rajshahi",
+      "category": "commercial",
+      "description": "Centrally located office space available for rent in Rajshahi. This modern office complex features flexible lease terms, state-of-the-art facilities, and a strategic location ideal for businesses looking to enhance their operational efficiency.",
+      "price": 3500,
+      "status": "rent",
+      "area": 1800,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Rajshahi"
+      },
+      "image": "https://i.ibb.co/BG4kTf6/pexels-lenzatic-2370724.jpg",
+      "facilities": ["Conference Rooms", "High-speed Internet", "24/7 Security"]
+   },
+   {
+      "estate_title": "Cozy Apartment in Barisal",
+      "category": "residential",
+      "description": "Enjoy comfort and convenience in this cozy apartment located in the heart of Barisal. Featuring modern amenities, serene surroundings, and easy access to local attractions, it's an ideal choice for individuals and families seeking a peaceful living environment.",
+      "price": 200000,
+      "status": "buy",
+      "area": 1200,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Barisal"
+      },
+      "image": "https://i.ibb.co/vLnHW0W/luxestate-bg-4.jpg",
+      "facilities": ["Fitness Center", "Community Garden", "Playground"]
+   },
+   {
+      "estate_title": "Commercial Space in Barisal",
+      "category": "commercial",
+      "description": "Prime commercial space available for lease in downtown Barisal. This property offers spacious retail areas, office spaces, and excellent visibility, making it an ideal choice for businesses looking to attract customers in a vibrant urban setting.",
+      "price": 2000,
+      "status": "rent",
+      "area": 1500,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Barisal"
+      },
+      "image": "https://i.ibb.co/TwwSNdz/pexels-pixabay-261102.jpg",
+      "facilities": ["Retail Space", "Office Rooms", "High-traffic Area"]
+   },
+   {
+      "estate_title": "Mountain Retreat in Sylhet",
+      "category": "residential",
+      "description": "Escape to this luxurious mountain retreat in Sylhet, offering panoramic views and a serene atmosphere. Perfect for nature lovers and outdoor enthusiasts, this property features spacious accommodations, a private garden, and easy access to hiking trails.",
+      "price": 900000,
+      "status": "buy",
+      "area": 4000,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Sylhet"
+      },
+      "image": "https://i.ibb.co/tBxpLJx/pexels-artur-roman-158558-539746.jpg",
+      "facilities": ["Private Garden", "Outdoor Terrace", "Hiking Trails"]
+   },
+   {
+      "estate_title": "Commercial Building in Sylhet",
+      "category": "commercial",
+      "description": "Invest in a prime commercial building in Sylhet's business district. This property offers multiple floors of office space, retail outlets, and secure parking, making it an ideal investment for businesses looking to expand their footprint in the region.",
+      "price": 4000000,
+      "status": "buy",
+      "area": 6000,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Sylhet"
+      },
+      "image": "https://i.ibb.co/87wXFqt/pexels-frankfurtpictures-3646913.jpg",
+      "facilities": ["Parking Garage", "Retail Shops", "Central Location"]
+   },
+   {
+      "estate_title": "Coastal Property in Rangpur",
+      "category": "residential",
+      "description": "Discover coastal living at its finest with this stunning property in Rangpur. Offering direct beach access, panoramic sea views, and luxurious amenities, this residence is ideal for those seeking a serene retreat with a touch of luxury.",
+      "price": 750000,
+      "status": "buy",
+      "area": 3000,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Rangpur"
+      },
+      "image": "https://i.ibb.co/prc2vPW/pexels-heyho-6527069.jpg",
+      "facilities": [
+         "Private Beach Access",
+         "Infinity Pool",
+         "Outdoor Dining Area"
+      ]
+   },
+   {
+      "estate_title": "Commercial Plaza in Rangpur",
+      "category": "commercial",
+      "description": "Own a commercial plaza in Rangpur's prime location. This property features retail spaces, offices, and ample parking, catering to businesses looking to establish their presence in a growing market.",
+      "price": 3500000,
+      "status": "buy",
+      "area": 4500,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Rangpur"
+      },
+      "image": "https://i.ibb.co/0yK489c/pexels-lukas-hartmann-304281-1827234.jpg",
+      "facilities": ["Parking Lot", "Retail Units", "Central Location"]
+   },
+   {
+      "estate_title": "Luxury Apartment in Mymensingh",
+      "category": "residential",
+      "description": "Indulge in luxury living with this exquisite apartment in Mymensingh. Featuring modern amenities, stunning views, and a vibrant community atmosphere, this residence offers comfort and sophistication for discerning homeowners.",
+      "price": 500000,
+      "status": "buy",
+      "area": 2200,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Mymensingh"
+      },
+      "image": "https://i.ibb.co/zm0NL0Q/pexels-heyho-6585599.jpg",
+      "facilities": ["Swimming Pool", "Fitness Center", "Community Lounge"]
+   },
+   {
+      "estate_title": "Office Complex in Mymensingh",
+      "category": "commercial",
+      "description": "Invest in a versatile office complex in Mymensingh. This property offers modern office spaces, conference facilities, and a strategic location for businesses looking to grow and thrive in a dynamic environment.",
+      "price": 6000,
+      "status": "rent",
+      "area": 1800,
+      "location": {
+         "country": "Bangladesh",
+         "division": "Mymensingh"
+      },
+      "image": "https://i.ibb.co/mbLSBYB/pexels-adrien-olichon-1257089-3709404.jpg",
+      "facilities": ["Conference Rooms", "High-speed Internet", "Parking"]
+   }
+]

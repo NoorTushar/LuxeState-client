@@ -28,6 +28,8 @@ const SearchSection = () => {
       <section className="py-[100px]">
          {/* Search Form */}
          <form className="max-w-lg mx-auto search-form grid grid-cols-3">
+            {/* Search by Type */}
+            {/* Search by Country */}
             <div className="inputBox">
                <label className="" htmlFor="">
                   Search by Country:
@@ -50,6 +52,7 @@ const SearchSection = () => {
                </select>
             </div>
 
+            {/* Property Size Range */}
             <div className="inputBox">
                <label htmlFor="">Property Range (sq.ft):</label>
                <div className="relative py-2">
