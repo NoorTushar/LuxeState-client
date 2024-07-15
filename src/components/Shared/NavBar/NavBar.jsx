@@ -3,7 +3,71 @@ import navLogo from "../../../assets/logo/luxtate-logo-gold.png";
 const navItems = (
    <>
       <li>
-         <a>Item 1</a>
+         <a>Home</a>
+      </li>
+
+      <li>
+         <a>About Us</a>
+      </li>
+      {/* Properties Mega menu */}
+      <li>
+         <details>
+            <summary>Properties</summary>
+
+            <ul className="p-2">
+               {/* Buy */}
+               <li>
+                  <details>
+                     <summary>Buy</summary>
+                     <ul className="p-2">
+                        <li>
+                           <a>Residential</a>
+                        </li>
+                        <li>
+                           <a>Commercial</a>
+                        </li>
+                     </ul>
+                  </details>
+               </li>
+               {/* Rent */}
+               <li>
+                  <details>
+                     <summary>Rent</summary>
+                     <ul className="p-2">
+                        <li>
+                           <a>Residential</a>
+                        </li>
+                        <li>
+                           <a>Commercial</a>
+                        </li>
+                     </ul>
+                  </details>
+               </li>
+               {/* Sell */}
+               <li>
+                  <details>
+                     <summary>Sell</summary>
+                     <ul className="p-2">
+                        <li>
+                           <a>Residential</a>
+                        </li>
+                        <li>
+                           <a>Commercial</a>
+                        </li>
+                     </ul>
+                  </details>
+               </li>
+            </ul>
+         </details>
+      </li>
+      <li>
+         <a>Services</a>
+      </li>
+      <li>
+         <a>Blog</a>
+      </li>
+      <li>
+         <a>Contact</a>
       </li>
    </>
 );
