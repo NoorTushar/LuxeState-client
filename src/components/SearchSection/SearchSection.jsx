@@ -60,6 +60,22 @@ const SearchSection = () => {
                   <li>
                      <button
                         type="button"
+                        onClick={() => setSelectedStatus("")}
+                        className={`py-1.5 px-4 relative group overflow-hidden font-medium  inline-block custom-next border-ourDeeperGold border hover:border-black  text-white uppercase ${
+                           selectedStatus === ""
+                              ? "bg-ourDeeperGold"
+                              : "bg-transparent"
+                        }`}
+                     >
+                        <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
+                        <span className="relative tracking-[2px] text-sm">
+                           all
+                        </span>
+                     </button>
+                  </li>
+                  <li>
+                     <button
+                        type="button"
                         onClick={() => setSelectedStatus("buy")}
                         className={`py-1.5 px-4 relative group overflow-hidden font-medium  inline-block custom-next border-ourDeeperGold border hover:border-black  text-white uppercase ${
                            selectedStatus === "buy"
