@@ -7,11 +7,13 @@ import LoadingSpinnerSmall from "../Shared/LoadingSpinner/LoadingSpinnerSmall";
 import Estate from "../Estate/Estate";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { Link } from "react-router-dom";
 
 const SearchSection = () => {
    const [selectedCountry, setSelectedCountry] = useState("");
    const [divisions, setDivisions] = useState(null);
    const [propertySize, setPropertySize] = useState(8000);
+   const [selectedStatus, setSelectedStatus] = useState("");
 
    const axiosPublic = useAxiosPublic();
 
@@ -20,10 +22,10 @@ const SearchSection = () => {
       isLoading,
       refetch,
    } = useQuery({
-      queryKey: ["estates", selectedCountry, propertySize],
+      queryKey: ["estates", selectedCountry, propertySize, selectedStatus],
       queryFn: async () => {
          const { data } = await axiosPublic(
-            `http://localhost:3000/estates?country=${selectedCountry}&&size=${propertySize}`
+            `http://localhost:3000/estates?country=${selectedCountry}&&size=${propertySize}&&status=${selectedStatus}`
          );
          return data;
       },
@@ -48,8 +50,58 @@ const SearchSection = () => {
    return (
       <section className="py-[100px]">
          {/* Search Form */}
-         <form className="max-w-lg mx-auto search-form grid grid-cols-3">
+         <form className="max-w-4xl mx-auto search-form grid grid-cols-3 gap-4">
             {/* Search by Type */}
+            <div className="inputBox">
+               <label className="" htmlFor="">
+                  Buy/ Rent/ Sell?
+               </label>
+               <menu className="flex flex-wrap gap-2">
+                  <li>
+                     <button
+                        type="button"
+                        onClick={() => setSelectedStatus("buy")}
+                        className={`py-1.5 px-4 relative group overflow-hidden font-medium  inline-block custom-next border-ourDeeperGold border hover:border-black  text-white uppercase ${
+                           selectedStatus === "buy"
+                              ? "bg-ourDeeperGold"
+                              : "bg-transparent"
+                        }`}
+                     >
+                        <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
+                        <span className="relative tracking-[2px] text-sm">
+                           buy
+                        </span>
+                     </button>
+                  </li>
+                  <li>
+                     <button
+                        type="button"
+                        onClick={() => setSelectedStatus("rent")}
+                        className={`py-1.5 px-4 relative group overflow-hidden font-medium  inline-block custom-next border-ourDeeperGold border hover:border-black  text-white uppercase ${
+                           selectedStatus === "rent"
+                              ? "bg-ourDeeperGold"
+                              : "bg-transparent"
+                        }`}
+                     >
+                        <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
+                        <span className="relative tracking-[2px] text-sm">
+                           rent
+                        </span>
+                     </button>
+                  </li>
+                  <li>
+                     <Link
+                        to={"/login"}
+                        className={`py-1.5 px-4 relative group overflow-hidden font-medium  inline-block custom-next border-ourDeeperGold border hover:border-black  text-white uppercase bg-transparent`}
+                     >
+                        <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
+                        <span className="relative tracking-[2px] text-sm">
+                           SELL
+                        </span>
+                     </Link>
+                  </li>
+               </menu>
+            </div>
             {/* Search by Country */}
             <div className="inputBox">
                <label className="" htmlFor="">
@@ -61,7 +113,7 @@ const SearchSection = () => {
                   name="country"
                   id=""
                >
-                  <option value=""></option>
+                  <option value="">All</option>
                   {countries.map((country) => (
                      <option
                         key={country.countryName}
