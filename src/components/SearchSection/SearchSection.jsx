@@ -15,16 +15,23 @@ const SearchSection = () => {
 
    const axiosPublic = useAxiosPublic();
 
-   const { data: estates = [], isLoading } = useQuery({
-      queryKey: ["estates"],
+   const {
+      data: estates = [],
+      isLoading,
+      refetch,
+   } = useQuery({
+      queryKey: ["estates", selectedCountry, propertySize],
       queryFn: async () => {
-         const { data } = await axiosPublic(`http://localhost:3000/estates`);
+         const { data } = await axiosPublic(
+            `http://localhost:3000/estates?country=${selectedCountry}&&size=${propertySize}`
+         );
          return data;
       },
    });
 
    const handleCountryChange = (e) => {
       setSelectedCountry(e.target.value);
+      refetch();
    };
 
    useEffect(() => {
@@ -106,9 +113,17 @@ const SearchSection = () => {
 
          {!isLoading && (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-               {estates?.map((estate) => (
-                  <Estate key={estate._id} {...estate} />
-               ))}
+               {estates.length > 0 ? (
+                  estates.map((estate) => (
+                     <Estate key={estate._id} {...estate} />
+                  ))
+               ) : (
+                  <div className="text-center">
+                     <p className="text-center">
+                        No data available with this search result
+                     </p>
+                  </div>
+               )}
             </div>
          )}
       </section>

@@ -5,7 +5,6 @@ import { FaHome } from "react-icons/fa";
 import { MdDone } from "react-icons/md";
 
 const Estate = ({
-   id,
    image,
    description,
    facilities,
