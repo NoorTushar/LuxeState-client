@@ -3,27 +3,41 @@ import countries from "../../assets/divisions.json";
 
 import "./SearchSection.css";
 
+import LoadingSpinnerSmall from "../Shared/LoadingSpinner/LoadingSpinnerSmall";
+import Estate from "../Estate/Estate";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+
 const SearchSection = () => {
    const [selectedCountry, setSelectedCountry] = useState("");
    const [divisions, setDivisions] = useState(null);
    const [propertySize, setPropertySize] = useState(8000);
+
+   const axiosPublic = useAxiosPublic();
+
+   const { data: estates = [], isLoading } = useQuery({
+      queryKey: ["estates"],
+      queryFn: async () => {
+         const { data } = await axiosPublic(`http://localhost:3000/estates`);
+         return data;
+      },
+   });
 
    const handleCountryChange = (e) => {
       setSelectedCountry(e.target.value);
    };
 
    useEffect(() => {
-      console.log(selectedCountry);
       const divisions = countries.find(
          (country) => country.countryName === selectedCountry
       );
       setDivisions(divisions?.divisions);
-      console.log(typeof divisions);
    }, [selectedCountry]);
 
    const handlePropertySizeChange = (e) => {
       setPropertySize(e.target.value);
    };
+
    return (
       <section className="py-[100px]">
          {/* Search Form */}
@@ -83,6 +97,17 @@ const SearchSection = () => {
                   >
                      {division}
                   </span>
+               ))}
+            </div>
+         )}
+
+         {/* Estates Cards */}
+         {isLoading && <LoadingSpinnerSmall />}
+
+         {!isLoading && (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+               {estates?.map((estate) => (
+                  <Estate key={estate._id} {...estate} />
                ))}
             </div>
          )}
