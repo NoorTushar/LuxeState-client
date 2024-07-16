@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import navLogo from "../../../assets/logo/luxtate-logo-gold.png";
 import "./NavBar.css";
 import useAuthContext from "../../../Hooks/useAuthContext";
@@ -9,7 +9,7 @@ import { MdOutlineMenu } from "react-icons/md";
 const navItems = (
    <>
       <li>
-         <Link to={"/"}>Home</Link>
+         <NavLink to={"/"}>Home</NavLink>
       </li>
 
       <li>
