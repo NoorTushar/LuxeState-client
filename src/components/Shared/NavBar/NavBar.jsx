@@ -1,6 +1,23 @@
 import { Link } from "react-router-dom";
 import navLogo from "../../../assets/logo/luxtate-logo-gold.png";
 import "./NavBar.css";
+import useAuthContext from "../../../Hooks/useAuthContext";
+import toast from "react-hot-toast";
+
+function isValidURL(url) {
+   if (!url) return false; // If URL is empty, consider it invalid
+   const pattern = new RegExp(
+      "^(https?:\\/\\/)?" + // protocol
+         "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+         "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+         "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+         "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+         "(\\#[-a-z\\d_]*)?$",
+      "i"
+   ); // fragment locator
+   return !!pattern.test(url);
+}
+
 const navItems = (
    <>
       <li>
@@ -74,6 +91,16 @@ const navItems = (
 );
 
 const NavBar = () => {
+   const { user, logoutUser } = useAuthContext();
+
+   const handleLogOut = (e) => {
+      e.preventDefault();
+      logoutUser()
+         .then(() => {
+            toast.success("logged out");
+         })
+         .catch((error) => console.error(error));
+   };
    return (
       <header className="navbar bg-base-100 fixed top-0 left-0 w-full z-50 shadow shadow-ourPrimary">
          <div className="navbar-start">
@@ -121,10 +148,37 @@ const NavBar = () => {
             <ul className="menu menu-horizontal px-1">{navItems}</ul>
          </div>
          <div className="navbar-end">
-            <Link className="py-1.5 px-4 relative group overflow-hidden font-medium bg-transparent inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase">
-               <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
-               <span className="relative tracking-[2px] text-sm">Login</span>
-            </Link>
+            {user ? (
+               <>
+                  <div
+                     className="tooltip  z-50  tooltip-bottom font-didact mr-2"
+                     data-tip={user?.displayName || "No username set yet"}
+                  >
+                     <img
+                        className="size-8 md:size-10 object-cover rounded-full cursor-pointer"
+                        src={user?.photoURL}
+                        alt=""
+                     ></img>
+                  </div>
+                  <button
+                     onClick={handleLogOut}
+                     className="py-1.5 px-4 relative group overflow-hidden font-medium bg-transparent inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase"
+                  >
+                     <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
+                     <span className="relative tracking-[2px] text-sm">
+                        Logout
+                     </span>
+                  </button>
+               </>
+            ) : (
+               <Link
+                  to={"/login"}
+                  className="py-1.5 px-4 relative group overflow-hidden font-medium bg-transparent inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase"
+               >
+                  <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
+                  <span className="relative tracking-[2px] text-sm">Login</span>
+               </Link>
+            )}
          </div>
       </header>
    );
