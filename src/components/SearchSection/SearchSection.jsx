@@ -109,7 +109,7 @@ const SearchSection = () => {
                   </li>
                   <li>
                      <Link
-                        to={"/login"}
+                        to={"/sell"}
                         className={`py-1.5 px-4 relative group overflow-hidden font-medium  inline-block custom-next border-ourDeeperGold border hover:border-black  text-white uppercase bg-transparent`}
                      >
                         <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
@@ -121,12 +121,12 @@ const SearchSection = () => {
                </menu>
             </div>
             {/* Search by Country */}
-            <div className="inputBox">
+            <div className="inputBox bg-ourBlack">
                <label className="" htmlFor="">
                   Search by Country:
                </label>
                <select
-                  className="border border-ourDeeperGold py-2 px-4 text-white"
+                  className="border border-ourDeeperGold py-2 px-4 text-white bg-ourBlack"
                   onChange={handleCountryChange}
                   name="country"
                   id=""

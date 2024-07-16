@@ -7,6 +7,10 @@
    --deeper-color: #8e6d45;
 }
 
+p {
+   color: lightgray;
+}
+
 /* .my-btn {
    color: #ddb263;
    position: relative;

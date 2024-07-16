@@ -3,9 +3,9 @@ import logo from "../../../assets/logo/luxstate-logo-black-text.png";
 
 const Footer = () => {
    return (
-      <footer className="footer footer-center bg-base-200 rounded p-10 gap-4">
+      <footer className="footer footer-center bg-gray-950 p-10 gap-4">
          <img className="max-w-[70px]" src={logo} alt="logo" />
-         <nav className="grid grid-flow-col gap-4">
+         <nav className="grid grid-flow-col gap-4 text-white">
             <a className="link link-hover">About us</a>
             <a className="link link-hover">Services</a>
             <a className="link link-hover">Blog</a>
@@ -36,7 +36,7 @@ const Footer = () => {
                <a
                   href="https://www.facebook.com/NoorTusharKhan/"
                   target="_blank"
-                  className="size-11 border-[0.1px] border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
+                  className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaFacebookF className=" text-white  text-sm"></FaFacebookF>
                </a>
@@ -45,7 +45,7 @@ const Footer = () => {
                <a
                   href="https://www.linkedin.com/in/noortushar/"
                   target="_blank"
-                  className="size-11 border-[0.1px] border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
+                  className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaLinkedin className="text-white text-lg"></FaLinkedin>
                </a>
@@ -54,7 +54,7 @@ const Footer = () => {
                <a
                   href="https://github.com/NoorTushar"
                   target="_blank"
-                  className="size-11 border-[0.1px] border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
+                  className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaGithub className="text-white text-lg"></FaGithub>
                </a>
@@ -63,7 +63,7 @@ const Footer = () => {
                <a
                   href="https://twitter.com/NoorTusharKhan"
                   target="_blank"
-                  className="size-11 border-[0.1px] border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
+                  className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaXTwitter className="text-white text-base"></FaXTwitter>
                </a>

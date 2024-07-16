@@ -1,21 +1,17 @@
-import { useNavigate, useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
    const error = useRouteError();
-   const navigate = useNavigate();
-
-   const handleGoHome = () => {
-      navigate("./");
-   };
 
    return (
-      <div className="min-h-screen flex items-center justify-center flex-col">
-         <button
-            className="btn font-bold rounded-xl hover:bg-[#23be0a] text-white bg-[#59c6d2] mb-6"
-            onClick={handleGoHome}
+      <div className="min-h-screen flex items-center justify-center flex-col bg-ourBlack">
+         <Link
+            to={"/"}
+            className="py-1.5 px-4 relative group overflow-hidden font-medium bg-transparent inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase mb-6"
          >
-            Home
-         </button>
+            <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
+            <span className="relative tracking-[2px] text-sm">Back Home</span>
+         </Link>
          <div className="text-center">
             <p className="text-2xl font-bold">{error.status}</p>
             <p className="text-2xl font-bold">

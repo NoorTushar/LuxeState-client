@@ -67,7 +67,7 @@ const Login = () => {
    };
 
    return (
-      <section className="py-[70px] min-h-[calc(100vh-84px)] max-w-[1170px] mx-auto w-[90%] md:w-[80%]">
+      <section className="py-[70px] min-h-[calc(100vh)] bg-ourBlack">
          <div className="mt-10">
             <Title title={"login"} upperTitle={"welcome"} />
          </div>
@@ -88,7 +88,7 @@ const Login = () => {
                      })}
                      type="email"
                      placeholder="Email *"
-                     className="w-full p-3 border-b border-zinc-300 bg-transparent outline-none duration-300 font-didact focus:border-ourPrimary placeholder:text-ourAsh text-ourAsh"
+                     className="w-full p-3 border-b border-zinc-300 bg-transparent outline-none duration-300 font-didact focus:border-ourPrimary text-white"
                   />
                   {errors?.email && (
                      <span className="text-red-500 block mt-1 mb-2 font-didact">
@@ -109,9 +109,9 @@ const Login = () => {
                         })}
                         type={showPassword ? "text" : "password"}
                         placeholder="Password *"
-                        className="w-full p-3 border-b border-zinc-300 bg-transparent outline-none duration-300 font-didact focus:border-ourPrimary placeholder:text-ourAsh text-ourAsh"
+                        className="w-full p-3 border-b border-zinc-300 bg-transparent outline-none duration-300 font-didact focus:border-ourPrimary text-white"
                      />
-                     <span className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-ourAsh">
+                     <span className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer ">
                         {showPassword ? (
                            <FaRegEye onClick={() => setShowPassword(false)} />
                         ) : (
@@ -142,18 +142,14 @@ const Login = () => {
             <div className="text-center">
                <p>Login with social accounts</p>
                <button
-                  data-aos="fade-right"
-                  data-aos-delay="150"
-                  data-aos-duration="800"
-                  data-aos-easing="ease-in-out"
                   onClick={handleLoginWithGoogle}
                   className="p-3 rounded-sm"
                >
-                  <FaGoogle className="text-xl hover:text-ourGold duration-300"></FaGoogle>
+                  <FaGoogle className="text-xl hover:text-ourGold duration-300 text-ourPrimary"></FaGoogle>
                </button>
             </div>
 
-            <p className="text-base text-center sm:px-6 text-ourAsh">
+            <p className="text-base text-center sm:px-6 ">
                Don`t have an account?{"  "}
                <Link
                   to={"/register"}
