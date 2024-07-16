@@ -8,6 +8,7 @@ import Estate from "../Estate/Estate";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { Link } from "react-router-dom";
+import Title from "../Shared/Title/Title";
 
 const SearchSection = () => {
    const [selectedCountry, setSelectedCountry] = useState("");
@@ -48,7 +49,8 @@ const SearchSection = () => {
    };
 
    return (
-      <section className="py-[100px]">
+      <section className="py-[60px]">
+         <Title title={"estates"} upperTitle={"view our"} />
          {/* Search Form */}
          <form className="max-w-4xl mx-auto search-form grid grid-cols-3 gap-4">
             {/* Search by Type */}

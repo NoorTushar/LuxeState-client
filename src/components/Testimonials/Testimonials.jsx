@@ -17,90 +17,106 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay } from "swiper/modules";
+import Title from "../Shared/Title/Title";
 
 export default function Testimonials() {
    return (
-      <section className="bg-slate-100">
-         <Swiper
-            slidesPerView={2}
-            spaceBetween={2}
-            loop={true}
-            autoplay={{
-               delay: 2000,
-               disableOnInteraction: false,
-            }}
-            breakpoints={{
-               0: {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-               },
-               640: {
-                  slidesPerView: 4,
-                  spaceBetween: 20,
-               },
-               768: {
-                  slidesPerView: 6,
-                  spaceBetween: 40,
-               },
-               1024: {
-                  slidesPerView: 8,
-                  spaceBetween: 10,
-               },
-            }}
-            modules={[Autoplay]}
-            className="mySwiper"
-         >
-            <SwiperSlide>
-               <div className="h-[100px] items-center justify-center flex">
-                  <img className="w-full max-w-[100px]" src={adidas} alt="" />
-               </div>
-            </SwiperSlide>
+      <section className="py-[60px]">
+         <Title title={"partners"} upperTitle={"our"} />
+         <div className="bg-stone-300">
+            <Swiper
+               slidesPerView={2}
+               spaceBetween={2}
+               loop={true}
+               autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+               }}
+               breakpoints={{
+                  0: {
+                     slidesPerView: 3,
+                     spaceBetween: 20,
+                  },
+                  640: {
+                     slidesPerView: 4,
+                     spaceBetween: 20,
+                  },
+                  768: {
+                     slidesPerView: 6,
+                     spaceBetween: 40,
+                  },
+                  1024: {
+                     slidesPerView: 8,
+                     spaceBetween: 10,
+                  },
+               }}
+               modules={[Autoplay]}
+               className="mySwiper"
+            >
+               <SwiperSlide>
+                  <div className="h-[100px] items-center justify-center flex">
+                     <img
+                        className="w-full max-w-[100px]"
+                        src={adidas}
+                        alt=""
+                     />
+                  </div>
+               </SwiperSlide>
 
-            <SwiperSlide>
-               <div className=" h-[100px] items-center justify-center flex">
-                  <img className="w-full max-w-[100px]" src={chanel} alt="" />
-               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-               <div className=" h-[100px] items-center justify-center flex">
-                  <img className="w-full max-w-[100px]" src={dell} alt="" />
-               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-               <div className=" h-[100px] items-center justify-center flex">
-                  <img
-                     className="w-full max-w-[100px]"
-                     src={engagement}
-                     alt=""
-                  />
-               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-               <div className=" h-[100px] items-center justify-center flex">
-                  <img className="w-full max-w-[100px]" src={isuzu} alt="" />
-               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-               <div className=" h-[100px] items-center justify-center flex">
-                  <img className="w-full max-w-[100px]" src={kia} alt="" />
-               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-               <div className=" h-[100px] items-center justify-center flex">
-                  <img className="w-full max-w-[100px]" src={philips} alt="" />
-               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-               <div className=" h-[100px] items-center justify-center flex">
-                  <img className="w-full max-w-[100px]" src={puma} alt="" />
-               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-               <div className=" h-[100px] items-center justify-center flex">
-                  <img className="w-full max-w-[100px]" src={vivo} alt="" />
-               </div>
-            </SwiperSlide>
-         </Swiper>
+               <SwiperSlide>
+                  <div className=" h-[100px] items-center justify-center flex">
+                     <img
+                        className="w-full max-w-[100px]"
+                        src={chanel}
+                        alt=""
+                     />
+                  </div>
+               </SwiperSlide>
+               <SwiperSlide>
+                  <div className=" h-[100px] items-center justify-center flex">
+                     <img className="w-full max-w-[100px]" src={dell} alt="" />
+                  </div>
+               </SwiperSlide>
+               <SwiperSlide>
+                  <div className=" h-[100px] items-center justify-center flex">
+                     <img
+                        className="w-full max-w-[100px]"
+                        src={engagement}
+                        alt=""
+                     />
+                  </div>
+               </SwiperSlide>
+               <SwiperSlide>
+                  <div className=" h-[100px] items-center justify-center flex">
+                     <img className="w-full max-w-[100px]" src={isuzu} alt="" />
+                  </div>
+               </SwiperSlide>
+               <SwiperSlide>
+                  <div className=" h-[100px] items-center justify-center flex">
+                     <img className="w-full max-w-[100px]" src={kia} alt="" />
+                  </div>
+               </SwiperSlide>
+               <SwiperSlide>
+                  <div className=" h-[100px] items-center justify-center flex">
+                     <img
+                        className="w-full max-w-[100px]"
+                        src={philips}
+                        alt=""
+                     />
+                  </div>
+               </SwiperSlide>
+               <SwiperSlide>
+                  <div className=" h-[100px] items-center justify-center flex">
+                     <img className="w-full max-w-[100px]" src={puma} alt="" />
+                  </div>
+               </SwiperSlide>
+               <SwiperSlide>
+                  <div className=" h-[100px] items-center justify-center flex">
+                     <img className="w-full max-w-[100px]" src={vivo} alt="" />
+                  </div>
+               </SwiperSlide>
+            </Swiper>
+         </div>
       </section>
    );
 }
