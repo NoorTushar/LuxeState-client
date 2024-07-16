@@ -11,7 +11,7 @@ const useEstates = () => {
    } = useQuery({
       queryKey: ["estates"],
       queryFn: async () => {
-         const { data } = await axiosPublic(`http://localhost:3000/estates`);
+         const { data } = await axiosPublic(`/estates`);
          return data;
       },
    });

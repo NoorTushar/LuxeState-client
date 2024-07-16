@@ -7,9 +7,10 @@ const Sell = () => {
             <Title title={"sell"} upperTitle={"welcome"} />
          </div>
          <div className="text-center">
-            <p>
-               You need to be a valid user to be able to list a property for
-               sell.
+            <p className="max-w-xl mx-auto">
+               You need to be an enlisted user with our company to be able to
+               list a property for sell. Please contact us to go through the
+               listing procedures.
             </p>
          </div>
       </section>

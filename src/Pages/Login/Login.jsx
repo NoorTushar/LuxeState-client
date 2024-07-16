@@ -113,9 +113,15 @@ const Login = () => {
                      />
                      <span className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer ">
                         {showPassword ? (
-                           <FaRegEye onClick={() => setShowPassword(false)} />
+                           <FaRegEye
+                              className="text-ourPrimary"
+                              onClick={() => setShowPassword(false)}
+                           />
                         ) : (
-                           <FaEyeSlash onClick={() => setShowPassword(true)} />
+                           <FaEyeSlash
+                              className="text-ourPrimary"
+                              onClick={() => setShowPassword(true)}
+                           />
                         )}
                      </span>
                   </div>

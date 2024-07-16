@@ -20,7 +20,7 @@ const navItems = (
          <details>
             <summary>Properties</summary>
 
-            <ul className="p-2">
+            <ul className="p-2 bg-ourBlack rounded-none border-ourPrimary border">
                {/* Buy */}
                <li>
                   <details>

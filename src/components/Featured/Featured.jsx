@@ -9,7 +9,7 @@ const Featured = () => {
    const { data: featured = [], isLoading } = useQuery({
       queryKey: ["featured"],
       queryFn: async () => {
-         const { data } = await axiosPublic(`http://localhost:3000/featured`);
+         const { data } = await axiosPublic(`/featured`);
          return data;
       },
    });

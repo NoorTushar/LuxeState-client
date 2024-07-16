@@ -26,7 +26,7 @@ const SearchSection = () => {
       queryKey: ["estates", selectedCountry, propertySize, selectedStatus],
       queryFn: async () => {
          const { data } = await axiosPublic(
-            `http://localhost:3000/estates?country=${selectedCountry}&&size=${propertySize}&&status=${selectedStatus}`
+            `/estates?country=${selectedCountry}&&size=${propertySize}&&status=${selectedStatus}`
          );
          return data;
       },
