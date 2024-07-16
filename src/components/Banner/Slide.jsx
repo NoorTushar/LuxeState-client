@@ -18,7 +18,7 @@ const Slide = ({ bgImg, swiperRef }) => {
                </h4>
                <h1 className="mb-5 text-[46px] lg:text-[86px] text-white font-semibold  tracking-[3px] md:leading-[60px] uppercase break-words">
                   real estate
-                  <br /> <span className="text-stroke">application</span>
+                  <br /> <span className="text-stroke">agency</span>
                </h1>
 
                <div className="flex justify-start"></div>

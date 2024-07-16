@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
 import { MdDone } from "react-icons/md";
@@ -49,13 +49,13 @@ const Estate = ({
                   sq.ft
                </p>
 
-               {description.length > 140 ? (
+               {/* {description.length > 140 ? (
                   <p>{description.slice(0, 140)} ...</p>
                ) : (
                   <p>{description}</p>
-               )}
+               )} */}
 
-               <ul className="">
+               {/* <ul className="">
                   Facilities:
                   {facilities.map((facility, index) => {
                      return (
@@ -65,9 +65,9 @@ const Estate = ({
                         </li>
                      );
                   })}
-               </ul>
+               </ul> */}
             </div>
-            <div>
+            {/* <div>
                <Link
                   to={"/login"}
                   className="py-1.5 px-4 relative group overflow-hidden font-medium  inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase"
@@ -77,7 +77,7 @@ const Estate = ({
                      Details
                   </span>
                </Link>
-            </div>
+            </div> */}
          </div>
       </div>
    );

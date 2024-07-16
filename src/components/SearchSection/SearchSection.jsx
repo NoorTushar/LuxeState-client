@@ -52,7 +52,7 @@ const SearchSection = () => {
       <section className="py-[60px]">
          <Title title={"estates"} upperTitle={"view our"} />
          {/* Search Form */}
-         <form className="max-w-4xl mx-auto search-form grid grid-cols-3 gap-4">
+         <form className="max-w-4xl mx-auto search-form grid lg:grid-cols-3 gap-4 justify-center">
             {/* Search by Type */}
             <div className="inputBox">
                <label className="" htmlFor="">
@@ -144,7 +144,7 @@ const SearchSection = () => {
             </div>
 
             {/* Property Size Range */}
-            <div className="inputBox">
+            <div className="inputBox max-w-[300px]">
                <label htmlFor="">Property Range (sq.ft):</label>
                <div className="relative py-2">
                   <input
@@ -182,7 +182,7 @@ const SearchSection = () => {
          {isLoading && <LoadingSpinnerSmall />}
 
          {!isLoading && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 px-6 ">
                {estates.length > 0 ? (
                   estates.map((estate) => (
                      <Estate key={estate._id} {...estate} />

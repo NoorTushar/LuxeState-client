@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import navLogo from "../../../assets/logo/luxtate-logo-gold.png";
+import "./NavBar.css";
 const navItems = (
    <>
       <li>
@@ -74,7 +75,7 @@ const navItems = (
 
 const NavBar = () => {
    return (
-      <header className="navbar bg-base-100 fixed top-0 left-0 w-full z-50">
+      <header className="navbar bg-base-100 fixed top-0 left-0 w-full z-50 shadow shadow-ourPrimary">
          <div className="navbar-start">
             <div className="dropdown">
                <div
@@ -120,10 +121,7 @@ const NavBar = () => {
             <ul className="menu menu-horizontal px-1">{navItems}</ul>
          </div>
          <div className="navbar-end">
-            <Link
-               to={"/login"}
-               className="py-1.5 px-4 relative group overflow-hidden font-medium bg-transparent inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase"
-            >
+            <Link className="py-1.5 px-4 relative group overflow-hidden font-medium bg-transparent inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase">
                <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
                <span className="relative tracking-[2px] text-sm">Login</span>
             </Link>
