@@ -1,9 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
-import navLogo from "../../../assets/logo/luxtate-logo-gold.png";
+import companyLogo from "../../../assets/logo/logo-company.jpeg";
 import "./NavBar.css";
 import useAuthContext from "../../../Hooks/useAuthContext";
 import toast from "react-hot-toast";
-import { FaHamburger } from "react-icons/fa";
 import { MdOutlineMenu } from "react-icons/md";
 
 const navItems = (
@@ -20,7 +19,7 @@ const navItems = (
          <details>
             <summary>Properties</summary>
 
-            <ul className="p-2 bg-ourBlack rounded-none border-ourPrimary border">
+            <ul className="p-2 bg-white rounded-none border-ourPrimary border">
                {/* Buy */}
                <li>
                   <details>
@@ -90,8 +89,9 @@ const NavBar = () => {
          .catch((error) => console.error(error));
    };
    return (
-      <header className="navbar bg-ourBlack fixed top-0 left-0 w-full z-50 shadow shadow-ourPrimary">
+      <header className="navbar bg-white fixed top-0 left-0 w-full z-50 shadow shadow-ourPrimary md:px-4">
          <div className="navbar-start">
+            {/* Dropdown Menu: Only visible in mobile screen */}
             <div className="dropdown">
                <div
                   tabIndex={0}
@@ -102,7 +102,7 @@ const NavBar = () => {
                </div>
                <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content bg-ourBlack rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                  className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
                >
                   {navItems}
                </ul>
@@ -111,12 +111,7 @@ const NavBar = () => {
                to={"/"}
                className="text-lg flex items-center gap-1 tracking-[3px] group"
             >
-               <img
-                  className="w-8 object-cover group-hover:"
-                  src={navLogo}
-                  alt=""
-               />
-               <h4 className="text-ourPrimary font-medium">LUXESTATE</h4>
+               <img className="w-28" src={companyLogo} alt="" />
             </Link>
          </div>
          <div className="navbar-center hidden lg:flex">
@@ -137,7 +132,7 @@ const NavBar = () => {
                   </div>
                   <button
                      onClick={handleLogOut}
-                     className="py-1.5 px-4 relative group overflow-hidden font-medium bg-transparent inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase"
+                     className="py-1.5 px-4 relative group overflow-hidden font-medium inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase login-button"
                   >
                      <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
                      <span className="relative tracking-[2px] text-sm">
@@ -148,7 +143,7 @@ const NavBar = () => {
             ) : (
                <Link
                   to={"/login"}
-                  className="py-1.5 px-4 relative group overflow-hidden font-medium bg-transparent inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase"
+                  className="py-1.5 px-4 relative group overflow-hidden font-medium inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase"
                >
                   <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
                   <span className="relative tracking-[2px] text-sm">Login</span>

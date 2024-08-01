@@ -4,10 +4,11 @@
 
 :root {
    --primary-color: #ddb263;
-   --deeper-color: #8e6d45;
+   --deeper-color: #764c28;
 }
 
-p {
+p,
+span {
    color: lightgray;
 }
 

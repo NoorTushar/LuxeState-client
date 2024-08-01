@@ -11,7 +11,7 @@ export default {
             // ourAsh: "#a9a9a9", // Ash
             ourBlack: `#1D232A`, // Black
             ourPrimary: "#DDB263", // Gold
-            ourDeeperGold: "#8E6D45",
+            ourDeeperGold: "#764C28",
             // ourLighterBlack: "#1B1B1B",
          },
       },
