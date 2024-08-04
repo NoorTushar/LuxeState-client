@@ -19,7 +19,7 @@ const Footer = () => {
                Sufiza Property Solutions
             </p>
 
-            <p className="text-black">
+            {/* <p className="text-black">
                Website by{" "}
                <strong>
                   <a
@@ -29,14 +29,13 @@ const Footer = () => {
                      Noor Tushar Khan
                   </a>
                </strong>
-            </p>
+            </p> */}
          </aside>
          <nav>
             <div className="grid grid-flow-col gap-4">
                {/* facebook */}
                <a
-                  href="https://www.facebook.com/NoorTusharKhan/"
-                  target="_blank"
+                  href="#"
                   className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaFacebookF className=" text-black  text-sm"></FaFacebookF>
@@ -44,8 +43,7 @@ const Footer = () => {
 
                {/* linkedin */}
                <a
-                  href="https://www.linkedin.com/in/noortushar/"
-                  target="_blank"
+                  href="#"
                   className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaLinkedin className="text-black text-lg"></FaLinkedin>
@@ -53,8 +51,7 @@ const Footer = () => {
 
                {/* github */}
                <a
-                  href="https://github.com/NoorTushar"
-                  target="_blank"
+                  href="#"
                   className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaGithub className="text-black text-lg"></FaGithub>
@@ -62,8 +59,7 @@ const Footer = () => {
 
                {/* twitter */}
                <a
-                  href="https://twitter.com/NoorTusharKhan"
-                  target="_blank"
+                  href="#"
                   className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaXTwitter className="text-black"></FaXTwitter>
