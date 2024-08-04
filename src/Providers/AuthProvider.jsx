@@ -7,6 +7,7 @@ import {
    signInWithPopup,
    signOut,
    updateProfile,
+   sendEmailVerification,
 } from "firebase/auth";
 import { auth } from "../Firebase/firebase.config";
 
@@ -89,6 +90,7 @@ const AuthProvider = ({ children }) => {
       updateUser,
       setLoading,
       logoutUser,
+      sendEmailVerification,
    };
    return (
       <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

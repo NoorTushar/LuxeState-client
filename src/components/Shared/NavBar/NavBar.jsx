@@ -120,7 +120,9 @@ const NavBar = () => {
          <div className="navbar-end">
             {user ? (
                <>
-                  <div
+                  {/* Show User Image */}
+
+                  {/* <div
                      className="tooltip  z-50  tooltip-bottom font-didact mr-2"
                      data-tip={user?.displayName || "No username set yet"}
                   >
@@ -129,7 +131,9 @@ const NavBar = () => {
                         src={user?.photoURL}
                         alt=""
                      ></img>
-                  </div>
+                  </div> */}
+
+                  {/* Show Logout Button */}
                   <button
                      onClick={handleLogOut}
                      className="py-1.5 px-4 relative group overflow-hidden font-medium inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase login-button"
