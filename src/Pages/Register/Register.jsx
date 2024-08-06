@@ -282,7 +282,7 @@ const Register = () => {
                   )}
                </div>
 
-               {/* login button */}
+               {/* register button */}
 
                <div className="flex items-center justify-center mt-8">
                   <button className="py-1.5 px-4 relative group overflow-hidden font-medium  inline-block border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase">

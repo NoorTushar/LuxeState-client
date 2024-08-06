@@ -72,7 +72,7 @@ const navItems = (
          <a>Blog</a>
       </li>
       <li>
-         <a>Contact</a>
+         <NavLink to={"/contact"}>Contact</NavLink>
       </li>
    </>
 );
