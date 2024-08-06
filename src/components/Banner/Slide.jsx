@@ -14,7 +14,11 @@ const Slide = ({ bgImg, swiperRef }) => {
          <div className="hero-content text-start mt-[68px]">
             <div className="max-w-3xl">
                <h4 className="text-ourPrimary text-lg mb-2 tracking-[5px] uppercase font-medium">
-                  welcome to luxestate
+                  WELCOME TO SUFIZA PROPERTY
+               </h4>
+
+               <h4 className="text-white text-lg mt-2 tracking-[5px] uppercase font-medium">
+                  YOUR MOST TRUSTED
                </h4>
                <h1 className="mb-5 text-[46px] lg:text-[86px] text-white font-semibold  tracking-[3px] md:leading-[60px] uppercase break-words">
                   real estate

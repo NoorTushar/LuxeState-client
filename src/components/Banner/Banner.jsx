@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import bg1 from "../../assets/banner/luxestate-bg-1.jpg";
-import bg2 from "../../assets/banner/luxestate-bg-5.jpg";
-import bg3 from "../../assets/banner/luxestate-bg-3.jpg";
-import bg4 from "../../assets/banner/luxestate-bg-4.jpg";
+import bg1 from "../../assets/banner/banner-1-bd-estate.jpg";
+import bg2 from "../../assets/banner/banner-2-bd-estate.jpg";
+import bg3 from "../../assets/banner/banner-3-bd-estate.jpeg";
+import bg4 from "../../assets/banner/banner-4-bd-estate.jpg";
 import "./Banner.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

@@ -66,7 +66,7 @@ const navItems = (
          </details>
       </li>
       <li>
-         <a>Services</a>
+         <NavLink to={"/services"}>Services</NavLink>
       </li>
       <li>
          <a>Blog</a>

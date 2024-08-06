@@ -1,13 +1,18 @@
 import { FaFacebookF, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import logo from "../../../assets/logo/logo-company.jpeg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
    return (
       <footer className="footer footer-center bg-white p-10 gap-4">
-         <img className="max-w-[200px]" src={logo} alt="logo" />
+         <Link to={"/"}>
+            <img className="max-w-[200px]" src={logo} alt="logo" />
+         </Link>
          <nav className="grid grid-flow-col gap-4 text-black">
             <a className="link link-hover">About us</a>
-            <a className="link link-hover">Services</a>
+            <Link to={"/services"} className="link link-hover">
+               Services
+            </Link>
 
             <a className="link link-hover">Blog</a>
             <a className="link link-hover">Contact</a>
