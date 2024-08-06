@@ -1,4 +1,10 @@
-import { FaFacebookF, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import {
+   FaFacebookF,
+   FaGithub,
+   FaLinkedin,
+   FaXTwitter,
+   FaYoutube,
+} from "react-icons/fa6";
 import logo from "../../../assets/logo/logo-company.jpeg";
 import { Link } from "react-router-dom";
 
@@ -9,13 +15,17 @@ const Footer = () => {
             <img className="max-w-[200px]" src={logo} alt="logo" />
          </Link>
          <nav className="grid grid-flow-col gap-4 text-black">
-            <a className="link link-hover">About us</a>
+            <Link to={"/about"} className="link link-hover">
+               About us
+            </Link>
             <Link to={"/services"} className="link link-hover">
                Services
             </Link>
 
             <a className="link link-hover">Blog</a>
-            <a className="link link-hover">Contact</a>
+            <Link to={"/contact"} className="link link-hover">
+               Contact
+            </Link>
          </nav>
 
          <aside>
@@ -23,24 +33,13 @@ const Footer = () => {
                Copyright © {new Date().getFullYear()} - All right reserved by
                Sufiza Property Solutions
             </p>
-
-            {/* <p className="text-black">
-               Website by{" "}
-               <strong>
-                  <a
-                     className="text-ourDeeperGold font-bold"
-                     href="https://www.facebook.com/NoorTusharKhan/"
-                  >
-                     Noor Tushar Khan
-                  </a>
-               </strong>
-            </p> */}
          </aside>
          <nav>
             <div className="grid grid-flow-col gap-4">
                {/* facebook */}
                <a
-                  href="#"
+                  href="https://www.facebook.com/SufizaProperty"
+                  target="_blank"
                   className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaFacebookF className=" text-black  text-sm"></FaFacebookF>
@@ -48,7 +47,8 @@ const Footer = () => {
 
                {/* linkedin */}
                <a
-                  href="#"
+                  href="https://www.linkedin.com/in/sufiza-property/"
+                  target="_blank"
                   className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaLinkedin className="text-black text-lg"></FaLinkedin>
@@ -56,19 +56,20 @@ const Footer = () => {
 
                {/* github */}
                <a
-                  href="#"
+                  href="https://www.youtube.com/channel/UCKuHeg1roTiGWaKTDD6XS9g"
+                  target="_blank"
                   className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
-                  <FaGithub className="text-black text-lg"></FaGithub>
+                  <FaYoutube className="text-black text-lg"></FaYoutube>
                </a>
 
                {/* twitter */}
-               <a
+               {/* <a
                   href="#"
                   className="size-11 border border-ourPrimary bg-opacity-80 rounded-full flex justify-center items-center bg-ourOrange cursor-pointer duration-300 hover:bg-ourPrimary hover:border-ourPrimary group"
                >
                   <FaXTwitter className="text-black"></FaXTwitter>
-               </a>
+               </a> */}
             </div>
          </nav>
       </footer>
