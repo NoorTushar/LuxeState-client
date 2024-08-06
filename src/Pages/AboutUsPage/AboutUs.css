@@ -1,0 +1,7 @@
+.bg-aboutUs {
+   background-image: url("../../assets/banner/banner-4-bd-estate.jpg");
+   min-height: 200px;
+   background-size: cover;
+   background-position: center;
+   background-repeat: none;
+}

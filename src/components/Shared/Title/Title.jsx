@@ -2,10 +2,10 @@
 const Title = ({ title, upperTitle }) => {
    return (
       <div className="text-center uppercase mb-10 md:mb-20">
-         <h4 className="tracking-[6px] text-sm md:text-base text-white">
+         <h4 className="tracking-[6px]  text-sm md:text-base text-white">
             {upperTitle}
          </h4>
-         <h2 className="text-ourPrimary text-3xl md:text-5xl font-light tracking-[10px] mt-3">
+         <h2 className="text-ourPrimary text-3xl md:text-5xl font-light tracking-[10px] mt-3 px-6">
             {title}
          </h2>
       </div>

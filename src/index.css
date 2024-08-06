@@ -8,7 +8,8 @@
 }
 
 p,
-span {
+span,
+li {
    color: lightgray;
 }
 

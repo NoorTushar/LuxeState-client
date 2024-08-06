@@ -12,7 +12,7 @@ const navItems = (
       </li>
 
       <li>
-         <a>About Us</a>
+         <NavLink to={"/about"}>About Us</NavLink>
       </li>
       {/* Properties Mega menu */}
       <li>
