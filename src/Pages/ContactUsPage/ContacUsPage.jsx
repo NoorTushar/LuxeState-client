@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useForm } from "react-hook-form";
 import Title from "../../components/Shared/Title/Title";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
-import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa6";
+import { FaLinkedin, FaYoutube } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 
 const ContactUsPage = () => {
@@ -14,10 +15,15 @@ const ContactUsPage = () => {
       formState: { errors },
    } = useForm();
 
-   const onSubmit = (data) => {
-      // creating a message object from the data
-      const message = { ...data };
-      console.log(message);
+   const onSubmit = async (data) => {
+      console.log(data);
+      try {
+         // Send the form data to the server
+         const response = await axiosPublic.post("/contact", data);
+         console.log(response.data);
+      } catch (error) {
+         console.error("Error sending message:", error);
+      }
    };
    return (
       <main className="pb-[70px] pt-[100px] min-h-[calc(100vh)] bg-ourBlack">
