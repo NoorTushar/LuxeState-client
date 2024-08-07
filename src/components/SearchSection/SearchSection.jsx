@@ -120,6 +120,7 @@ const SearchSection = () => {
                   </li>
                </menu>
             </div>
+
             {/* Search by Country */}
             <div className="inputBox bg-ourBlack">
                <label className="" htmlFor="">

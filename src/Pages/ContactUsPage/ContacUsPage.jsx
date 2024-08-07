@@ -16,6 +16,7 @@ const ContactUsPage = () => {
    } = useForm();
 
    const onSubmit = async (data) => {
+      // this data is an object which has all the field name and values
       console.log(data);
       try {
          // Send the form data to the server
@@ -94,28 +95,50 @@ const ContactUsPage = () => {
                   )}
                </div>
 
-               {/* Email Field */}
-               <div className="mt-4">
-                  <input
-                     {...register("email", {
-                        required: {
-                           value: true,
-                           message: "Must provide an email",
-                        },
-                        pattern: {
-                           value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                           message: "Must provide a valid email address",
-                        },
-                     })}
-                     type="email"
-                     placeholder="Email *"
-                     className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
-                  />
-                  {errors?.email && (
-                     <span className="text-red-500 block mt-1 mb-2 ">
-                        {errors.email.message}
-                     </span>
-                  )}
+               <div className="grid sm:grid-cols-2 sm:gap-6">
+                  {/* Email Field */}
+                  <div className="mt-4">
+                     <input
+                        {...register("email", {
+                           required: {
+                              value: true,
+                              message: "Must provide an email",
+                           },
+                           pattern: {
+                              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                              message: "Must provide a valid email address",
+                           },
+                        })}
+                        type="email"
+                        placeholder="Email *"
+                        className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     />
+                     {errors?.email && (
+                        <span className="text-red-500 block mt-1 mb-2 ">
+                           {errors.email.message}
+                        </span>
+                     )}
+                  </div>
+
+                  {/* phone Field */}
+                  <div className="mt-4">
+                     <input
+                        {...register("phone", {
+                           required: {
+                              value: true,
+                              message: "Must provide your contact number.",
+                           },
+                        })}
+                        type="text"
+                        placeholder="Phone *"
+                        className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     />
+                     {errors?.phone && (
+                        <span className="text-red-500 block mt-1 mb-2">
+                           {errors.phone.message}
+                        </span>
+                     )}
+                  </div>
                </div>
 
                {/* comment Field */}
