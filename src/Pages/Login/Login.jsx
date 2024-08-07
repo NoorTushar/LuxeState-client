@@ -135,7 +135,7 @@ const Login = () => {
                {/* login button */}
 
                <div className="flex items-center justify-center mt-8">
-                  <button className="py-1.5 px-4 relative group overflow-hidden font-medium  inline-block border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase">
+                  <button className="py-1.5 rounded-md px-4 relative group overflow-hidden font-medium  inline-block border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase">
                      <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
                      <span className="relative tracking-[2px] text-sm">
                         login

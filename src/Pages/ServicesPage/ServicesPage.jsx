@@ -3,6 +3,8 @@ import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import LoadingSpinner from "../../components/Shared/LoadingSpinner/LoadingSpinner";
 import Title from "../../components/Shared/Title/Title";
 
+import "./ServicesPage.css";
+
 const ServicesPage = () => {
    const [services, isLoading] = useServices();
    console.log(services);
@@ -10,10 +12,14 @@ const ServicesPage = () => {
    if (isLoading) return <LoadingSpinner />;
 
    return (
-      <main className="pb-[70px] pt-[100px] min-h-[calc(100vh)] bg-ourBlack">
-         <Title title={"Services"} upperTitle={"What we provide"} />
+      <main className="pb-[70px] pt-[100px] min-h-[calc(100vh)]  servicePage">
+         <Title
+            title={"Services"}
+            upperTitle={"What we provide"}
+            titleColor="neutral-900"
+         />
 
-         <h2 className="text-white text-center text-2xl max-w-3xl mx-auto md:-mt-14 px-6">
+         <h2 className="text-neutral-900 text-center text-2xl max-w-3xl mx-auto md:-mt-14 px-6">
             At Sufiza property we offer multiple services - all are related to
             property solutions.
          </h2>

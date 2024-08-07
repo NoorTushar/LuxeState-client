@@ -12,6 +12,10 @@ export default {
             ourBlack: `#1D232A`, // Black
             ourPrimary: "#DDB263", // Gold
             ourDeeperGold: "#764C28",
+            ourGreen: "#74Af44",
+            ourCoffee: "#774e2a",
+            ourYellow: "#febc34",
+            ourLighterYellow: "#fed504",
             // ourLighterBlack: "#1B1B1B",
          },
       },

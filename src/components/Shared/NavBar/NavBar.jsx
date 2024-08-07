@@ -136,7 +136,7 @@ const NavBar = () => {
                   {/* Show Logout Button */}
                   <button
                      onClick={handleLogOut}
-                     className="py-1.5 px-4 relative group overflow-hidden font-medium inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase login-button"
+                     className="py-1.5 px-4 relative group overflow-hidden font-medium inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase login-button rounded-md"
                   >
                      <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
                      <span className="relative tracking-[2px] text-sm">
@@ -147,7 +147,7 @@ const NavBar = () => {
             ) : (
                <Link
                   to={"/login"}
-                  className="py-1.5 px-4 relative group overflow-hidden font-medium inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase"
+                  className="py-1.5 px-4 relative group overflow-hidden font-medium inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase rounded-md"
                >
                   <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
                   <span className="relative tracking-[2px] text-sm">Login</span>
