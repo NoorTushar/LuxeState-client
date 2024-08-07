@@ -14,7 +14,7 @@
    }
 }
 #banner .text-stroke {
-   -webkit-text-stroke: 1px white; /* Adds white stroke to the text */
+   -webkit-text-stroke: 2px white; /* Adds white stroke to the text */
    color: transparent; /* Makes the text color transparent */
 }
 
