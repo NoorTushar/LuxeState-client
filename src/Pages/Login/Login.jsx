@@ -67,7 +67,7 @@ const Login = () => {
    };
 
    return (
-      <section className="py-[70px] min-h-[calc(100vh)] bg-ourBlack">
+      <section className="py-[70px] min-h-[calc(100vh)]">
          <div className="mt-10">
             <Title title={"login"} upperTitle={"welcome"} />
          </div>
@@ -144,7 +144,7 @@ const Login = () => {
                </div>
             </form>
 
-            {/* Google Login */}
+            {/* Google Login
             <div className="text-center">
                <p>Login with social accounts</p>
                <button
@@ -153,15 +153,12 @@ const Login = () => {
                >
                   <FaGoogle className="text-xl hover:text-ourGold duration-300 text-ourPrimary"></FaGoogle>
                </button>
-            </div>
+            </div> */}
 
             <p className="text-base text-center sm:px-6 ">
                Don`t have an account?{"  "}
-               <Link
-                  to={"/register"}
-                  className="underline text-gray-100 font-semibold "
-               >
-                  Regiser
+               <Link to={"/register"} className="underline font-semibold ">
+                  Register
                </Link>
             </p>
          </div>

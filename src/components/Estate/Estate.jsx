@@ -3,6 +3,7 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
 import { MdDone } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Estate = ({
    image,
@@ -16,12 +17,12 @@ const Estate = ({
    location,
 }) => {
    return (
-      <div className=" h-full bg-neutral-900 ">
+      <div className=" h-full bg-white rounded-xl shadow-xl overflow-hidden">
          <div className="relative overflow-hidden">
             <img
                src={image}
                alt=""
-               className="object-cover object-center w-full h-72 hover:scale-110 duration-300"
+               className="object-cover object-center w-full h-72 hover:scale-110 duration-300 "
             />
 
             <span className="absolute font-light tracking-[1px] px-4 py-2  bg-neutral-900 top-0 -right-1 uppercase text-sm text-ourPrimary">
@@ -37,7 +38,7 @@ const Estate = ({
          </div>
          <div className="flex flex-col  p-6 space-y-8 ">
             <div className="space-y-2">
-               <h2 className="text-lg   tracking-[2px] uppercase text-ourPrimary">
+               <h2 className="text-lg   tracking-[2px] uppercase">
                   {estate_title}
                </h2>
                <p className="flex items-center gap-2">
@@ -67,17 +68,14 @@ const Estate = ({
                   })}
                </ul> */}
             </div>
-            {/* <div>
-               <Link
-                  to={"/login"}
-                  className="py-1.5 px-4 relative group overflow-hidden font-medium  inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase"
-               >
+            <div className="flex-grow flex items-end justify-center py-2">
+               <Link className="py-2.5 px-4 relative group overflow-hidden font-medium  inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourCoffee text-white uppercase rounded-md">
                   <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-neutral-900 group-hover:h-full opacity-90"></span>
                   <span className="relative tracking-[2px] text-sm">
-                     Details
+                     Learn More
                   </span>
                </Link>
-            </div> */}
+            </div>
          </div>
       </div>
    );

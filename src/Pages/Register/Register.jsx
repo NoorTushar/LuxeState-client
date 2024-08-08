@@ -103,7 +103,7 @@ const Register = () => {
    // };
 
    return (
-      <section className="py-[70px] min-h-[calc(100vh)] bg-ourBlack">
+      <section className="py-[70px] min-h-[calc(100vh)] ">
          <div className="mt-10">
             <Title title={"register"} upperTitle={"welcome"} />
          </div>
@@ -120,7 +120,7 @@ const Register = () => {
                      })}
                      type="text"
                      placeholder="User Name *"
-                     className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                   />
                   {errors?.userName && (
                      <span className="text-red-500 block mt-1 mb-2 ">
@@ -135,7 +135,7 @@ const Register = () => {
                      {...register("firstName")}
                      type="text"
                      placeholder="First Name"
-                     className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                   />
                   {errors?.firstName && (
                      <span className="text-red-500 block mt-1 mb-2 ">
@@ -150,7 +150,7 @@ const Register = () => {
                      {...register("lastName")}
                      type="text"
                      placeholder="Last Name"
-                     className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                   />
                   {errors?.lastName && (
                      <span className="text-red-500 block mt-1 mb-2 ">
@@ -174,7 +174,7 @@ const Register = () => {
                      })}
                      type="email"
                      placeholder="Email *"
-                     className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                   />
                   {errors?.email && (
                      <span className="text-red-500 block mt-1 mb-2 ">
@@ -194,7 +194,7 @@ const Register = () => {
                      })}
                      type="text"
                      placeholder="Phone *"
-                     className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                   />
                   {errors?.phone && (
                      <span className="text-red-500 block mt-1 mb-2">
@@ -214,7 +214,7 @@ const Register = () => {
                      })}
                      type="text"
                      placeholder="Home/ Office Address *"
-                     className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                   />
                   {errors?.address && (
                      <span className="text-red-500 block mt-1 mb-2">
@@ -234,7 +234,7 @@ const Register = () => {
                      })}
                      type="text"
                      placeholder="Photo URL *"
-                     className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                   />
                   {errors?.photoURL && (
                      <span className="text-red-500 block mt-1 mb-2 ">
@@ -265,7 +265,7 @@ const Register = () => {
                         })}
                         type={showPassword ? "text" : "password"}
                         placeholder="Password *"
-                        className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                        className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                      />
                      <span className="absolute right-3 top-1/2 -translate-y-1/2 cu">
                         {showPassword ? (
@@ -307,10 +307,7 @@ const Register = () => {
 
             <p className="text-base text-center">
                Already have an account?{"  "}
-               <Link
-                  to={"/login"}
-                  className="underline text-gray-100 font-semibold "
-               >
+               <Link to={"/login"} className="underline font-semibold ">
                   Login
                </Link>
             </p>

@@ -5,11 +5,11 @@ import "./AboutUs.css";
 
 const AboutUsPage = () => {
    return (
-      <main className="pb-[70px] pt-[100px] min-h-[calc(100vh)] bg-ourBlack">
+      <main className="pb-[70px] pt-[100px] min-h-[calc(100vh)]">
          <Title upperTitle={"about"} title={"Sufiza Property Solutions"} />
          <div className="bg-aboutUs"></div>
 
-         <div className="max-w-4xl mx-auto px-6 mt-8 md:mt-14 text-white">
+         <div className="max-w-4xl mx-auto px-6 mt-8 md:mt-14">
             <p className="">
                Sufiza Property Solutions is the Property Solutions Provider in
                Dhaka, helping people to find their desired Apartment, for Buy,
@@ -30,39 +30,39 @@ const AboutUsPage = () => {
             {/* list items */}
             <ul className="mt-6">
                <li className="flex">
-                  <TiTick className="text-ourPrimary text-2xl" />
+                  <TiTick className="text-ourYellow text-2xl" />
                   We have a vast collection of properties in locations across
                   Dhaka suited to your needs and budget.
                </li>
 
                <li className="flex">
-                  <TiTick className="text-ourPrimary text-2xl" />
+                  <TiTick className="text-ourYellow text-2xl" />
                   We ensure that the property owners and related documents are
                   genuine by thorough screening so that you can relax.
                </li>
 
                <li className="flex">
-                  <TiTick className="text-ourPrimary text-2xl" />
+                  <TiTick className="text-ourYellow text-2xl" />
                   We offer free home inspection to ensure quality of the
                   property.
                </li>
 
                <li className="flex">
-                  <TiTick className="text-ourPrimary text-2xl" />
+                  <TiTick className="text-ourYellow text-2xl" />
                   We provide legal vetting services and documentation support
                   when drafting Agreement, Sale Permission, and other legal
                   documents.
                </li>
 
                <li className="flex">
-                  <TiTick className="text-ourPrimary text-2xl" />
+                  <TiTick className="text-ourYellow text-2xl" />
                   We also offer after-sales support such as registration and
                   mutation of property, document verification, home loans, and
                   home shifting.
                </li>
 
                <li className="flex">
-                  <TiTick className="text-ourPrimary text-2xl" />
+                  <TiTick className="text-ourYellow text-2xl" />
                   We have a large network of potential buyers, sellers, and
                   tenants for them to connect with one another and with us.
                </li>
@@ -74,7 +74,7 @@ const AboutUsPage = () => {
                Email: sufizafamily@gmail.com <br />
                We also have a user-friendly website:{" "}
                <a
-                  className="text-ourPrimary"
+                  className="text-ourCoffee underline"
                   href="www.sufizaproperty.com"
                   target="_blank"
                >

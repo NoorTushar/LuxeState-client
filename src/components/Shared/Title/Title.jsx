@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Title = ({ title, upperTitle, titleColor = "ourPrimary" }) => {
+const Title = ({ title, upperTitle, titleColor = "ourCoffee" }) => {
    return (
       <div className="text-center uppercase mb-10 md:mb-20">
          <h4

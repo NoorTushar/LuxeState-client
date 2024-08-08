@@ -11,6 +11,7 @@ const ContactUsPage = () => {
    const {
       register,
       handleSubmit,
+      reset,
       getValues,
       formState: { errors },
    } = useForm();
@@ -22,12 +23,15 @@ const ContactUsPage = () => {
          // Send the form data to the server
          const response = await axiosPublic.post("/contact", data);
          console.log(response.data);
+         if (response.data === "Message sent successfully") {
+            reset();
+         }
       } catch (error) {
          console.error("Error sending message:", error);
       }
    };
    return (
-      <main className="pb-[70px] pt-[100px] min-h-[calc(100vh)] bg-ourBlack">
+      <main className="pb-[70px] pt-[100px] min-h-[calc(100vh)">
          <Title title={"Contact Us"} />
 
          <div className="max-w-2xl px-6 mx-auto">
@@ -45,7 +49,7 @@ const ContactUsPage = () => {
                         })}
                         type="text"
                         placeholder="First Name *"
-                        className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                        className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                      />
                      {errors?.firstName && (
                         <span className="text-red-500 block mt-1 mb-2 ">
@@ -65,7 +69,7 @@ const ContactUsPage = () => {
                         })}
                         type="text"
                         placeholder="Last Name *"
-                        className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                        className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                      />
                      {errors?.lastName && (
                         <span className="text-red-500 block mt-1 mb-2 ">
@@ -86,7 +90,7 @@ const ContactUsPage = () => {
                      })}
                      type="text"
                      placeholder="Home/ Office Address *"
-                     className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                   />
                   {errors?.address && (
                      <span className="text-red-500 block mt-1 mb-2">
@@ -111,7 +115,7 @@ const ContactUsPage = () => {
                         })}
                         type="email"
                         placeholder="Email *"
-                        className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                        className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                      />
                      {errors?.email && (
                         <span className="text-red-500 block mt-1 mb-2 ">
@@ -131,7 +135,7 @@ const ContactUsPage = () => {
                         })}
                         type="text"
                         placeholder="Phone *"
-                        className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                        className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                      />
                      {errors?.phone && (
                         <span className="text-red-500 block mt-1 mb-2">
@@ -152,7 +156,7 @@ const ContactUsPage = () => {
                      })}
                      rows={8}
                      placeholder="Your comment *"
-                     className="w-full p-3 border-b border-zinc-300 text-white bg-transparent outline-none duration-300  focus:border-ourPrimary"
+                     className="w-full p-3 border-b border-zinc-300  bg-transparent outline-none duration-300  focus:border-ourPrimary"
                   />
                   {errors?.comment && (
                      <span className="text-red-500 block mt-1 mb-2">
@@ -163,10 +167,10 @@ const ContactUsPage = () => {
 
                {/* Submit Button */}
                <div className="flex items-center justify-center mt-8">
-                  <button className="py-1.5 px-4 relative group overflow-hidden font-medium  inline-block border-ourDeeperGold border hover:border-black bg-ourDeeperGold text-white uppercase">
-                     <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
+                  <button className="py-2.5 px-4 relative group overflow-hidden font-medium  inline-block custom-next border-ourDeeperGold border hover:border-black bg-ourCoffee text-white uppercase rounded-md">
+                     <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-neutral-900 group-hover:h-full opacity-90"></span>
                      <span className="relative tracking-[2px] text-sm">
-                        Submit
+                        Learn More
                      </span>
                   </button>
                </div>

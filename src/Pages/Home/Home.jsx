@@ -5,14 +5,14 @@ import Testimonials from "../../components/Testimonials/Testimonials";
 
 const Home = () => {
    return (
-      <div className="bg-ourBlack">
+      <>
          <Banner />
          <div className="max-w-[1170px] mx-auto">
             <SearchSection />
             <Featured />
          </div>
          <Testimonials />
-      </div>
+      </>
    );
 };
 

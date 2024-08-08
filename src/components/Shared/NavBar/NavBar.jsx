@@ -89,7 +89,7 @@ const NavBar = () => {
          .catch((error) => console.error(error));
    };
    return (
-      <header className="navbar bg-white fixed top-0 left-0 w-full z-50 shadow shadow-ourPrimary md:px-4">
+      <header className="navbar bg-white fixed top-0 left-0 w-full z-50 shadow shadow-ourCoffee md:px-4">
          <div className="navbar-start">
             {/* Dropdown Menu: Only visible in mobile screen */}
             <div className="dropdown">

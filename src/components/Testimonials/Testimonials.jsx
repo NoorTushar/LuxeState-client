@@ -23,7 +23,7 @@ export default function Testimonials() {
    return (
       <section className="py-[60px]">
          <Title title={"partners"} upperTitle={"our"} />
-         <div className="bg-stone-300">
+         <div className="">
             <Swiper
                slidesPerView={2}
                spaceBetween={2}

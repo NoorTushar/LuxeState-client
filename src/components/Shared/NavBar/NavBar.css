@@ -3,5 +3,6 @@ header li {
 }
 
 header li .active {
-   color: gold !important;
+   color: white !important;
+   background-color: #774e2a !important;
 }
