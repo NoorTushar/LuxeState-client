@@ -12,16 +12,16 @@ import Title from "../Shared/Title/Title";
 import useCountries from "../../Hooks/useCountries";
 
 const SearchSection = () => {
+   const [countries] = useCountries();
    const [propertySize, setPropertySize] = useState(8000);
    const [selectedPurpose, setSelectedPurpose] = useState("");
    const [selectedCountry, setSelectedCountry] = useState("");
    const [selectedPrice, setSelectedPrice] = useState();
-   const [selectedPropertyType, setSelectedPropertyType] = useState("");
-   const [selectedBedrooms, setSelectedBedrooms] = useState("");
+
+   const [divisions, setDivisions] = useState([]);
 
    const axiosPublic = useAxiosPublic();
-   const [countries] = useCountries();
-   console.log(countries);
+
    const {
       data: estates = [],
       isLoading,
@@ -37,6 +37,29 @@ const SearchSection = () => {
       },
    });
 
+   useEffect(() => {
+      if (selectedCountry === "") {
+         setDivisions(countries?.divisions);
+         return;
+      } else {
+         const divisions = estates.map((estate) => estate?.location?.division);
+         let uniqueDivisions = [];
+
+         divisions.forEach((division) => {
+            // Check if the division is not already in uniqueDivisions
+            if (
+               !uniqueDivisions.find(
+                  (eachDivision) => eachDivision === division
+               )
+            ) {
+               uniqueDivisions.push(division);
+            }
+
+            setDivisions(uniqueDivisions);
+         });
+      }
+   }, [countries, selectedCountry, estates]);
+
    const handlePurposeChange = (e) => {
       setSelectedPurpose(e.target.value);
       console.log(selectedPurpose);
@@ -51,10 +74,6 @@ const SearchSection = () => {
    const handlePropertySizeChange = (e) => {
       setPropertySize(e.target.value);
    };
-
-   // if (selectedPurpose === "sale") {
-   //    navigate("/sell");
-   // }
 
    return (
       <section className="py-[60px]">
@@ -110,11 +129,11 @@ const SearchSection = () => {
                   name="division"
                >
                   <option value="">All</option>
-                  {/* {divisions?.map((division) => (
+                  {divisions?.map((division) => (
                      <option key={division} value={division}>
                         {division}
                      </option>
-                  ))} */}
+                  ))}
                </select>
             </div>
 
