@@ -19,6 +19,7 @@ const SearchSection = () => {
    const [selectedPrice, setSelectedPrice] = useState();
 
    const [divisions, setDivisions] = useState([]);
+   const [selectedDivision, setSelectedDivision] = useState("");
 
    const axiosPublic = useAxiosPublic();
 
@@ -31,7 +32,7 @@ const SearchSection = () => {
 
       queryFn: async () => {
          const { data } = await axiosPublic(
-            `/estates?size=${propertySize}&&status=${selectedPurpose}&&country=${selectedCountry}`
+            `/estates?size=${propertySize}&&status=${selectedPurpose}&&country=${selectedCountry}&&division=${selectedDivision}`
          );
          return data;
       },
@@ -60,6 +61,10 @@ const SearchSection = () => {
       }
    }, [countries, selectedCountry, estates]);
 
+   useEffect(() => {
+      refetch();
+   }, [selectedDivision]);
+
    const handlePurposeChange = (e) => {
       setSelectedPurpose(e.target.value);
       console.log(selectedPurpose);
@@ -69,6 +74,11 @@ const SearchSection = () => {
    const handleCountryChange = (e) => {
       setSelectedCountry(e.target.value);
       refetch();
+   };
+
+   const handleDivisionChange = (e) => {
+      setSelectedDivision(e.target.value);
+      console.log(selectedDivision);
    };
 
    const handlePropertySizeChange = (e) => {
@@ -125,7 +135,7 @@ const SearchSection = () => {
                </label>
                <select
                   className="border border-ourDeeperGold py-2 px-4  "
-                  // onChange={handleCountryChange}
+                  onChange={handleDivisionChange}
                   name="division"
                >
                   <option value="">All</option>
