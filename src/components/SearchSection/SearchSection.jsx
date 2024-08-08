@@ -89,7 +89,7 @@ const SearchSection = () => {
       <section className="py-[60px]">
          <Title title={"estates"} upperTitle={"view our"} />
          {/* Search Form */}
-         <form className="max-w-4xl mx-auto search-form grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 justify-center px-6">
+         <form className="max-w-4xl mx-auto search-form grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 justify-center px-6 gap-y-6 md:gap-y-10">
             {/* Search by Purpose */}
             <div className="inputBox ">
                <label className="" htmlFor="">
