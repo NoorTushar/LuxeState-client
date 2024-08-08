@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import countries from "../../assets/divisions.json";
+
 import { purposes } from "../../assets/data";
 
 import "./SearchSection.css";
@@ -9,37 +9,33 @@ import Estate from "../Estate/Estate";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Title from "../Shared/Title/Title";
-import { useNavigate } from "react-router-dom";
+import useCountries from "../../Hooks/useCountries";
 
 const SearchSection = () => {
-   const navigate = useNavigate();
-   const [selectedCountry, setSelectedCountry] = useState("");
-   const [divisions, setDivisions] = useState(null);
    const [propertySize, setPropertySize] = useState(8000);
    const [selectedPurpose, setSelectedPurpose] = useState("");
+   const [selectedCountry, setSelectedCountry] = useState("");
    const [selectedPrice, setSelectedPrice] = useState();
    const [selectedPropertyType, setSelectedPropertyType] = useState("");
    const [selectedBedrooms, setSelectedBedrooms] = useState("");
 
    const axiosPublic = useAxiosPublic();
+   const [countries] = useCountries();
+   console.log(countries);
    const {
       data: estates = [],
       isLoading,
       refetch,
    } = useQuery({
-      queryKey: ["estates", selectedCountry, propertySize, selectedPurpose],
+      queryKey: ["estates", propertySize, selectedPurpose, selectedCountry],
+
       queryFn: async () => {
          const { data } = await axiosPublic(
-            `/estates?country=${selectedCountry}&&size=${propertySize}&&status=${selectedPurpose}`
+            `/estates?size=${propertySize}&&status=${selectedPurpose}&&country=${selectedCountry}`
          );
          return data;
       },
    });
-
-   const handleCountryChange = (e) => {
-      setSelectedCountry(e.target.value);
-      refetch();
-   };
 
    const handlePurposeChange = (e) => {
       setSelectedPurpose(e.target.value);
@@ -47,22 +43,10 @@ const SearchSection = () => {
       refetch();
    };
 
-   useEffect(() => {
-      if (selectedCountry === "") {
-         const allDivisions = countries.reduce(
-            (acc, country) => acc.concat(country.divisions),
-            []
-         );
-
-         setDivisions(allDivisions);
-         return;
-      }
-
-      const divisions = countries.find(
-         (country) => country.countryName === selectedCountry
-      );
-      setDivisions(divisions?.divisions);
-   }, [selectedCountry]);
+   const handleCountryChange = (e) => {
+      setSelectedCountry(e.target.value);
+      refetch();
+   };
 
    const handlePropertySizeChange = (e) => {
       setPropertySize(e.target.value);
@@ -107,12 +91,9 @@ const SearchSection = () => {
                   name="country"
                >
                   <option value="">All</option>
-                  {countries.map((country) => (
-                     <option
-                        key={country.countryName}
-                        value={country.countryName}
-                     >
-                        {country.countryName}
+                  {countries?.countries?.map((country) => (
+                     <option key={country} value={country}>
+                        {country}
                      </option>
                   ))}
                </select>
@@ -125,15 +106,15 @@ const SearchSection = () => {
                </label>
                <select
                   className="border border-ourDeeperGold py-2 px-4  "
-                  onChange={handleCountryChange}
+                  // onChange={handleCountryChange}
                   name="division"
                >
                   <option value="">All</option>
-                  {divisions?.map((division) => (
+                  {/* {divisions?.map((division) => (
                      <option key={division} value={division}>
                         {division}
                      </option>
-                  ))}
+                  ))} */}
                </select>
             </div>
 
