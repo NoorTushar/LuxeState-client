@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
    return (
-      <footer className="footer footer-center bg-ourYellow p-10 gap-4 text-">
+      <footer className="footer footer-center border-t shad p-10 gap-4 text-">
          <Link to={"/"}>
             <img className="max-w-[200px]" src={logo} alt="logo" />
          </Link>

@@ -25,13 +25,13 @@ const Estate = ({
                className="object-cover object-center w-full h-72 hover:scale-110 duration-300 "
             />
 
-            <span className="absolute font-light tracking-[1px] px-4 py-2  bg-neutral-900 top-0 -right-1 uppercase text-sm text-ourPrimary">
+            <span className="absolute font-light tracking-[1px] px-4 py-2  bg-ourCoffee top-0 -right-1 uppercase text-sm text-white">
                {status}
             </span>
-            <span className="absolute font-light tracking-[1px] px-4 py-2  bg-neutral-900 bottom-0 left-0 uppercase text-sm text-ourPrimary">
+            <span className="absolute font-light tracking-[1px] px-4 py-2  bg-ourCoffee bottom-0 left-0 uppercase text-sm text-white">
                {category}
             </span>
-            <span className="absolute font-light tracking-[1px] px-4 py-2 bg-neutral-900 bottom-0 right-0 text-sm text-ourPrimary">
+            <span className="absolute font-light tracking-[1px] px-4 py-2 bg-ourCoffee bottom-0 right-0 text-sm text-white">
                {status === "rent" && `$${price}/month`}
                {status === "buy" && `$${price}`}
             </span>
