@@ -26,10 +26,10 @@ const navItems = (
                      <summary>Buy</summary>
                      <ul className="p-2">
                         <li>
-                           <a>Residential</a>
+                           <NavLink to={"/buy-res"}>Residential</NavLink>
                         </li>
                         <li>
-                           <a>Commercial</a>
+                           <NavLink to={"/buy-comm"}>Commercial</NavLink>
                         </li>
                      </ul>
                   </details>
@@ -40,10 +40,10 @@ const navItems = (
                      <summary>Rent</summary>
                      <ul className="p-2">
                         <li>
-                           <a>Residential</a>
+                           <NavLink to={"/rent-res"}>Residential</NavLink>
                         </li>
                         <li>
-                           <a>Commercial</a>
+                           <NavLink to={"/rent-comm"}>Commercial</NavLink>
                         </li>
                      </ul>
                   </details>

@@ -8,6 +8,10 @@ import Sell from "../Pages/Sell/Sell";
 import ServicesPage from "../Pages/ServicesPage/ServicesPage";
 import AboutUsPage from "../Pages/AboutUsPage/AboutUsPage";
 import ContactUsPage from "../Pages/ContactUsPage/ContacUsPage";
+import BuyResidential from "../Pages/Buy/BuyResidential";
+import RentResidential from "../Pages/Rent/RentResidential";
+import BuyCommercial from "../Pages/Buy/BuyCommercial";
+import RentCommercial from "../Pages/Rent/RentCommercial";
 
 export const router = createBrowserRouter([
    {
@@ -25,6 +29,10 @@ export const router = createBrowserRouter([
          { path: "/services", element: <ServicesPage /> },
          { path: "/about", element: <AboutUsPage /> },
          { path: "/contact", element: <ContactUsPage /> },
+         { path: "/buy-res", element: <BuyResidential /> },
+         { path: "/rent-res", element: <RentResidential /> },
+         { path: "/buy-comm", element: <BuyCommercial /> },
+         { path: "/rent-comm", element: <RentCommercial /> },
       ],
    },
 ]);
