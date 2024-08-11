@@ -54,10 +54,10 @@ const navItems = (
                      <summary>Sell</summary>
                      <ul className="p-2">
                         <li>
-                           <a>Residential</a>
+                           <Link to={"/sell"}>Residential</Link>
                         </li>
                         <li>
-                           <a>Commercial</a>
+                           <Link to={"/sell"}>Commercial</Link>
                         </li>
                      </ul>
                   </details>

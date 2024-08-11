@@ -2,7 +2,7 @@ import Title from "../../components/Shared/Title/Title";
 
 const Sell = () => {
    return (
-      <section className="py-[70px] min-h-[calc(100vh)] bg-ourBlack">
+      <section className="py-[70px] min-h-[calc(100vh)]">
          <div className="mt-10">
             <Title title={"sell"} upperTitle={"welcome"} />
          </div>

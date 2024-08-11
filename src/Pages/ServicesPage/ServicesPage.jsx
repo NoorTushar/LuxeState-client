@@ -26,7 +26,9 @@ const ServicesPage = () => {
          {/* Cards */}
          <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto px-6 mt-10">
             {services.map((service) => (
-               <ServiceCard key={service._id} service={service} />
+               <li key={service._id}>
+                  <ServiceCard service={service} />
+               </li>
             ))}
          </ul>
       </main>
