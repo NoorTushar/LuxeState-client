@@ -12,6 +12,8 @@ import "swiper/css/autoplay"; // Import Swiper autoplay styles if needed
 import { Pagination, Autoplay } from "swiper/modules";
 import ClientIframe from "./ClientIframe/ClientIframe";
 
+import "./ClientsVideoSection.css";
+
 // Video Links:
 const videoLinks = [
    {
@@ -37,14 +39,14 @@ const ClientsVideoSection = () => {
       <section className="py-[60px] px-6">
          <Title title={"Customer's Words"} upperTitle={"Sufiza in"} />
 
-         <div className="max-w-[1200px] mx-auto border">
+         <div className="max-w-[1200px] mx-auto">
             <Swiper
                slidesPerView={3} // Default number of slides per view
                spaceBetween={30} // Space between slides
                pagination={{ clickable: true }} // Enable clickable pagination buttons
                loop={true}
                modules={[Pagination, Autoplay]} // Include the necessary modules
-               className="mySwiper "
+               className="mySwiper clientsSwiper"
                breakpoints={{
                   1024: {
                      slidesPerView: 3, // 3 slides on large screens
@@ -64,8 +66,6 @@ const ClientsVideoSection = () => {
                ))}
             </Swiper>
          </div>
-
-         <div></div>
       </section>
    );
 };
