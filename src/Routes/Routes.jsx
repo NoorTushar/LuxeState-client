@@ -12,6 +12,7 @@ import BuyResidential from "../Pages/Buy/BuyResidential";
 import RentResidential from "../Pages/Rent/RentResidential";
 import BuyCommercial from "../Pages/Buy/BuyCommercial";
 import RentCommercial from "../Pages/Rent/RentCommercial";
+import AllEstatePage from "../Pages/AllEstatePage/AllEstatePage";
 
 export const router = createBrowserRouter([
    {
@@ -33,6 +34,7 @@ export const router = createBrowserRouter([
          { path: "/rent-res", element: <RentResidential /> },
          { path: "/buy-comm", element: <BuyCommercial /> },
          { path: "/rent-comm", element: <RentCommercial /> },
+         { path: "/all", element: <AllEstatePage /> },
       ],
    },
 ]);

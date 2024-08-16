@@ -3,6 +3,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Title from "../Shared/Title/Title";
 import LoadingSpinnerSmall from "../Shared/LoadingSpinner/LoadingSpinnerSmall";
 import Estate from "../Estate/Estate";
+import ShowAllBtn from "../ShowAllBtn/ShowAllBtn";
 
 const Featured = () => {
    const axiosPublic = useAxiosPublic();
@@ -21,11 +22,11 @@ const Featured = () => {
          {isLoading && <LoadingSpinnerSmall />}
 
          {!isLoading && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-10 px-6 ">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 px-6 ">
                {featured.length > 0 ? (
-                  featured.map((estate) => (
-                     <Estate key={estate._id} {...estate} />
-                  ))
+                  featured
+                     .slice(0, 3)
+                     .map((estate) => <Estate key={estate._id} {...estate} />)
                ) : (
                   <div className="text-center">
                      <p className="text-center">
@@ -35,6 +36,8 @@ const Featured = () => {
                )}
             </div>
          )}
+
+         <ShowAllBtn />
       </section>
    );
 };
