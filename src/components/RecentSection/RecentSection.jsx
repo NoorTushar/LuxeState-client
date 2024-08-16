@@ -14,6 +14,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import LoadingSpinnerSmall from "../Shared/LoadingSpinner/LoadingSpinnerSmall";
 import Estate from "../Estate/Estate";
+import ShowAllBtn from "../ShowAllBtn/ShowAllBtn";
 
 const RecentSection = () => {
    const axiosPublic = useAxiosPublic();
@@ -69,6 +70,8 @@ const RecentSection = () => {
                   </SwiperSlide>
                ))}
             </Swiper>
+
+            <ShowAllBtn />
          </div>
       </section>
    );
