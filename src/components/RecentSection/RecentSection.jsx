@@ -78,11 +78,3 @@ const RecentSection = () => {
 };
 
 export default RecentSection;
-
-// const ClientsSlider = () => {
-//    return (
-
-//    );
-// };
-
-// export default ClientsSlider;
