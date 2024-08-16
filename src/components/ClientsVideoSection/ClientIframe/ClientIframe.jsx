@@ -2,7 +2,7 @@ const ClientIframe = ({ link }) => {
    return (
       <div className="pb-10 flex justify-center ">
          <iframe
-            className="rounded-xl border w-full lg:w-[300px] h-[300px] md:w-2/3 lg:h-[200px]"
+            className="rounded-xl border w-full lg:w-full h-[300px] md:w-2/3 lg:h-[220px]"
             src={link.link}
             title="YouTube video player"
             frameBorder="0"

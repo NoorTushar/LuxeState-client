@@ -42,7 +42,7 @@ const ClientsVideoSection = () => {
          <div className="max-w-[1200px] mx-auto">
             <Swiper
                slidesPerView={3} // Default number of slides per view
-               spaceBetween={30} // Space between slides
+               spaceBetween={10} // Space between slides
                pagination={{ clickable: true }} // Enable clickable pagination buttons
                loop={true}
                modules={[Pagination, Autoplay]} // Include the necessary modules

@@ -19,7 +19,7 @@ const ServicesPage = () => {
             titleColor="neutral-900"
          />
 
-         <h2 className="text-neutral-900 text-center text-2xl max-w-3xl mx-auto md:-mt-14 px-6">
+         <h2 className="text-neutral-900 text-center text-xl max-w-3xl mx-auto md:-mt-14 px-6">
             At Sufiza property we offer multiple services - all are related to
             property solutions.
          </h2>
