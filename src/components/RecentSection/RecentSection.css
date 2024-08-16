@@ -1,0 +1,10 @@
+.swiper-pagination-bullet-active {
+   background-color: #774e2a !important;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+   bottom: -5px !important;
+}
